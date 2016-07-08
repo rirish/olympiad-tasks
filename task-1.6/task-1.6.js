@@ -1,10 +1,10 @@
 function transfer(meters, santimeters) {
     const SANTIMETERS_IN_METER = 100;
     const INCHES_IN_FOOT = 12;
-    const INCHES_IN_SANTIMETER = 2.54;
-    var inches = (meters*SANTIMETERS_IN_METER + santimeters) / INCHES_IN_SANTIMETER;
-    var foot = Math.floor(inches/12);
-    var restInches = inches%12;
+    const SANTIMETERS_IN_INCH = 2.54;
+    var inches = (meters*SANTIMETERS_IN_METER + santimeters) / SANTIMETERS_IN_INCH;
+    var foot = Math.floor(inches/INCHES_IN_FOOT);
+    var restInches = inches%INCHES_IN_FOOT;
     alert(`Foots: ${foot} \r\nInches: ${restInches}`);
 
 };
