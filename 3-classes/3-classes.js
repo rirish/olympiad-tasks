@@ -49,7 +49,6 @@ class EmployeeContainer {
 
     constructor(){
         this._employees = [];
-        this.generateEmployees();
     }
 
     generateEmployees(){
@@ -124,10 +123,29 @@ function update() {
 
 
 function getList() {
-    var textareaData = document.getElementsById('Textarea').value;
-    var employeeString = textareaData.split('\n');
-    var employeeProps = employeeString.split(',');
+    debugger;
+    var textareaData = document.getElementById('Textarea').value;
+    var employeeStrings = textareaData.split('\n');
+    employeeStrings.forEach((oneEmployee) => {
+        var employeeProps = oneEmployee.split(',');
+        var salaryType = employeeProps[0];
+        var id = employeeProps[1];
+        var name = employeeProps[2];
+        var salary = +employeeProps[3];
 
-    
+        switch (salaryType){
+            case 'EmployeeHourlySalary':
+                e1.employees.push(new EmployeeHourlySalary(id, name, salary));
+                break;
+            case 'EmployeeFixedSalary':
+                e1.employees.push(new EmployeeFixedSalary(id, name, salary));
+                break;
+        }
+    });
+
+
+
+
+
 
 }
