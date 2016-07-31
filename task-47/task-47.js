@@ -10,15 +10,12 @@ console.log("Average grade: " + avarageMark);
 
 if (avarageMark < 60){
     console.log("Grade: F");
-}
-else if (avarageMark < 70) {
-    console.log("Grade: D");
-}
-else if (avarageMark < 80)
-{
-    console.log("Grade: C");
-} else if (avarageMark < 90) {
-    console.log("Grade: B");
-} else if (avarageMark < 100) {
-    console.log("Grade: A");
-}
+    }else if (avarageMark < 70){
+        console.log("Grade: D");
+        }else if (avarageMark < 80){
+            console.log("Grade: C");
+            }else if (avarageMark < 90){
+                console.log("Grade: B");
+                }else if (avarageMark < 100){
+                    console.log("Grade: A");
+                }
